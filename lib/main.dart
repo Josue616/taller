@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'View/home.dart';
+import 'register.dart';
 import 'controller/user_controller.dart';
 import 'controller/session_manager.dart';
 
@@ -98,6 +99,16 @@ class LoginPageState extends State<LoginPage> {
             ElevatedButton(
               onPressed: _login,
               child: const Text('Login'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RegisterPage()),
+                );
+              },
+              child: const Text('Register'), // Texto del botón
             ),
           ],
         ),
